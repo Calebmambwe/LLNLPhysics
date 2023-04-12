@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="MenuItemListView">
+        <attr name="title" format="string" />
+        <attr name="dimension" format="dimension" />
+        <attr name="color" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+</resources>

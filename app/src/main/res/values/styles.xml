@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Widget.Theme.LLNLPhysics.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="color">@color/light_blue_400</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.Theme.LLNLPhysics.MyView">
+        <item name="android:background">@color/blue</item>
+    </style>
+</resources>
