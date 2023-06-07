@@ -46,8 +46,20 @@ class ExperimentActivity : AppCompatActivity() {
                 addToBackStack("name")
             }
         }
-    }
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+    // this event will enable the back
+    // function to the button on press
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onContextItemSelected(item)
+    }
     // create an action bar button
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // R.menu.mymenu is a reference to an xml file named mymenu.xml which should be inside your res/menu directory.

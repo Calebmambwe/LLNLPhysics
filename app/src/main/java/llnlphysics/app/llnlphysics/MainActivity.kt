@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import llnlphysics.app.llnlphysics.R
 import java.util.*
 
 
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExperimentActivity::class.java).apply {
                 // you can add values(if any) to pass to the next class or avoid using `.apply`
                 //not sure yet how to better tie enum to list item besides position
-                when(position){
+                when (position) {
                     0 -> putExtra("expType", ExperimentType.eAccelerometer)
                     1 -> putExtra("expType", ExperimentType.eGyroscope)
                     2 -> putExtra("expType", ExperimentType.eMagnetometer)
@@ -57,24 +56,6 @@ class MainActivity : AppCompatActivity() {
                     4 -> putExtra("expType", ExperimentType.eGPS)
                 }
             })
-
         }
-    }
-
-    // create an action bar button
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // R.menu.mymenu is a reference to an xml file named mymenu.xml which should be inside your res/menu directory.
-        // If you don't have res/menu, just create a directory named "menu" inside res
-        menuInflater.inflate(R.menu.menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    // handle button activities
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id: Int = item.getItemId()
-        if (id == R.id.action_play) {
-            // do something here
-        }
-        return super.onOptionsItemSelected(item)
     }
 }
