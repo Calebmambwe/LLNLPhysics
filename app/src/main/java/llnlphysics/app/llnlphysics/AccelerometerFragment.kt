@@ -14,3 +14,4 @@ class AccelerometerFragment : ThreeAxisBaseExperimentFragment<FragmentAccelerome
     override var mSensorManager: SensorManager? = null
     override var mSensor: Sensor? = null
 }
+//making some changes
